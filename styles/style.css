@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 10em;
+    background-color: rgb(23, 23, 23);
+}
+
+nav {
+    background-color: rgba(33, 33, 33, 0.98);
+    height: 6em;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+}
+
+#menu-left, #menu-right {
+    display: flex;
+}
+
+#menu-left {
+    justify-content: space-evenly;
+}
+
+#menu-left > * {
+    margin-left: 1em;
+    margin-right: .3em;
+}
+
+#menu-right {
+    justify-content: space-evenly;
+    margin-right: 2em;
+}
+
+nav .burger {
+    font-size: 32px;
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    position: relative;
+}
+
+nav .burger .burger-menu {
+    width: 100%;
+    height: .1em;
+    background-color: #FFF;
+    position: absolute;
+    top: .5em;
+}
+
+.burger-menu::before, .burger-menu::after {
+    content: '';
+    width: 100%;
+    height: inherit;
+    background-color: inherit;
+    display: block;
+}
+
+.burger-menu::before {
+    transform: translateY(-.27em);
+}
+
+.burger-menu::after {
+    transform: translateY(.17em);
+}
+
+.logo {
+    position: relative;
+    height: 100%;
+    width: 200px;
+}
+
+#yt-logo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2.2em;
+    z-index: 1;
+}
+
+#menu-right > * {
+    margin: 0 .75em;
+}
+
+.icon {
+    height: 100%;
+    width: 45px;
+    padding-top: .4em;
+}
+
+#youtube-paths path {
+    fill: #FFF;
+}
+
+.yt-icon {
+    display: block;
+    fill: #FFF;
+}
+
+.profile {
+    width: 55px;
+    height: 55px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-left: 1.6em !important;
+}
+
+.player {
+    width: 100vw;
+}
+
+.player iframe {
+    display: block;
+    margin: auto;
+    width: 90%;
+    min-height: 450px;
+}
