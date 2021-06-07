@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+    --yt-text-primary: #FFF;
+    --yt-text-secondary: rgb(163, 163, 163);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +16,11 @@ body {
     background-color: rgb(23, 23, 23);
 }
 
+/* Navbar */
+
 nav {
     background-color: rgba(33, 33, 33, 0.98);
-    height: 6em;
+    height: 4em;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -40,8 +50,8 @@ nav {
 
 nav .burger {
     font-size: 32px;
-    width: 1em;
-    height: 1em;
+    width: .8em;
+    height: .8em;
     cursor: pointer;
     position: relative;
 }
@@ -51,7 +61,7 @@ nav .burger .burger-menu {
     height: .1em;
     background-color: #FFF;
     position: absolute;
-    top: .5em;
+    top: .4em;
 }
 
 .burger-menu::before, .burger-menu::after {
@@ -78,9 +88,7 @@ nav .burger .burger-menu {
 
 #yt-logo {
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 2.2em;
+    height: 1.7em;
     z-index: 1;
 }
 
@@ -90,8 +98,8 @@ nav .burger .burger-menu {
 
 .icon {
     height: 100%;
-    width: 45px;
-    padding-top: .4em;
+    width: 35px;
+    padding-top: .6em;
 }
 
 #youtube-paths path {
@@ -104,20 +112,179 @@ nav .burger .burger-menu {
 }
 
 .profile {
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     background-color: #000;
     border-radius: 50%;
-    margin-left: 1.6em !important;
+    margin-left: 1.3em !important;
 }
 
-.player {
-    width: 100vw;
+
+.container {
+    width: 90%;
+    margin: auto;
 }
+
+/*Player*/
 
 .player iframe {
     display: block;
     margin: auto;
-    width: 90%;
+    width: 100%;
+    height: auto;
     min-height: 450px;
+}
+
+/* Video details, buttons */
+
+.player .title {
+    color: #FFF;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 1.3em 0 .4em 0 ;
+}
+
+.player .views {
+    color: var(--yt-text-secondary);
+    font-family: sans-serif;
+    
+}
+
+.action-buttons {
+    width: 100%;
+    height: 100%;
+}
+
+.likes {
+    width: 14em;
+    position: relative;
+    min-width: 15em;
+}
+
+
+.btn  svg {
+    width: 2em !important;
+    display: inline-block !important;
+}
+
+.btn svg path{
+    fill: rgb(172, 172, 172);
+}
+
+.thumb-up, .thumb-down {
+    float: left;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: rgb(172, 172, 172);
+    font-weight: 600;
+    font-family: Roboto;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0px 1em;
+}
+
+.btn svg {
+    margin-right: .5em;
+}
+
+.likes progress {
+    border-radius: 0;
+    background-color: #000;
+    color: #000;
+    height: .2em;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -.7em;
+}
+
+
+.likes ::-webkit-progress-value {
+    background-image: linear-gradient(0, #999, #999);
+}
+
+.likes ::-webkit-progress-bar {
+    background-image: linear-gradient(0, #555, #555);
+}
+
+
+.video-metadata {
+    display: flex;
+    height: 6em;
+    justify-content: center;
+    border-bottom: 1px solid rgb(53, 53, 53);
+    padding-bottom: .6em;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.video-header {
+    width: 15em;
+    position: absolute;
+    left: 0;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* Description section */
+
+.video-description {
+    font-family: sans-serif;
+    width: 100%;
+    height: 15em;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+.author-col {
+    width: 18em;
+}
+.author-avatar {
+    border-radius: 50%;
+    width: 4em;
+    margin-right: 1.5em;
+}
+
+.channel-details .channel-name {
+    padding: .5em 0 .3em;
+    color: var(--yt-text-primary);
+    font-weight: 600;
+}
+
+.channel-details .subscriber-count {
+    color: var(--yt-text-secondary);
+    font-size: 13px;
+}
+
+.video-description .details-col {
+    flex: 1;
+    min-width: 16em;
+}
+
+.video-description .description {
+    color: var(--yt-text-primary);
+    padding-top: 2em;
+}
+
+.subscribe-col {
+    right: 0;
+}
+
+.subscribe-btn {
+    padding: 1em 2em;
+    background-color: rgb(236, 0, 0);
+    color: var(--yt-text-primary);
+    border: none;
+    cursor: pointer;
 }
