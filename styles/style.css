@@ -40,8 +40,7 @@ nav {
 }
 
 #menu-left > * {
-    margin-left: 1em;
-    margin-right: .3em;
+    margin-left: 1.5em;
 }
 
 #menu-right {
@@ -50,7 +49,7 @@ nav {
 }
 
 nav .burger {
-    font-size: 32px;
+    font-size: 24px;
     width: .8em;
     height: .8em;
     cursor: pointer;
@@ -89,8 +88,9 @@ nav .burger .burger-menu {
 
 #yt-logo {
     position: absolute;
-    height: 1.7em;
+    height: 1.4em;
     z-index: 1;
+    margin-left: 1em;
 }
 
 #menu-right > * {
@@ -99,7 +99,7 @@ nav .burger .burger-menu {
 
 .icon {
     height: 100%;
-    width: 35px;
+    width: 30px;
     padding-top: .6em;
 }
 
@@ -131,16 +131,17 @@ nav .burger .burger-menu {
 
 /*Player*/
 
-.player {
-    flex: 1;
+.video-player {
+    padding-bottom: 56.25%;
+    position: relative;
 }
 
 .player iframe {
     display: block;
     margin: auto;
     width: 100%;
-    height: auto;
-    min-height: 600px;
+    height: 100%;
+    position: absolute;
 }
 
 /* Video details, buttons */
@@ -155,6 +156,7 @@ nav .burger .burger-menu {
 .player .views {
     color: var(--yt-text-secondary);
     font-family: sans-serif;
+    display: none;
     
 }
 
@@ -332,15 +334,28 @@ nav .burger .burger-menu {
 
 .recommended > * {
     margin-top: .3em;
-    min-width: 26em;
+    min-width: 18em;
 }
 
 @media only screen and (min-width: 1130px) {
     .container {
         flex-direction: row;
+        max-width: unset;
+        width: 90%;
+    }
+
+    .player {
+        width: 1600px;
     }
 
     .recommended {
         margin-left: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    
+    .player .views {
+        display: inline;
     }
 }
