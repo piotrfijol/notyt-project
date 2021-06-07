@@ -28,7 +28,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 0;
+    z-index: 1;
 }
 
 #menu-left, #menu-right {
@@ -126,6 +126,8 @@ nav .burger .burger-menu {
     margin: auto;
     display: flex;
     flex-direction: column;
+    display: grid;
+    grid-templ
     max-width: 1600px;
 }
 
@@ -312,6 +314,24 @@ nav .burger .burger-menu {
     font-family: sans-serif;
 }
 
+.recommended-video-thumbnail {
+    position: relative;
+    width: 220px;
+    height: 92px;
+}
+
+.recommended-video-duration {
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--yt-text-primary);
+    padding: .2em .4em;
+    font-size: 12px;
+    font-weight: 600;
+    bottom: 0;
+    right: .4em;
+}
+
 .recommended-video-details {
     padding-left: 1em;
     color: var(--yt-text-secondary);
@@ -335,17 +355,24 @@ nav .burger .burger-menu {
 .recommended > * {
     margin-top: .3em;
     min-width: 18em;
+    max-width: 26em;
 }
 
 @media only screen and (min-width: 1130px) {
     .container {
-        flex-direction: row;
+        grid-template-columns: 2fr 1fr;
         max-width: unset;
-        width: 90%;
+        width: 95%;
+        max-width: 1900px;
     }
 
     .player {
-        width: 1600px;
+        min-width: 700px;
+        flex: 1;
+    }
+
+    .recommended-video-date {
+        display: none;
     }
 
     .recommended {
@@ -353,9 +380,21 @@ nav .burger .burger-menu {
     }
 }
 
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 1150px) {
     
     .player .views {
         display: inline;
     }
+}
+
+.comment-section p {
+    font-family: sans-serif;
+    color: var(--yt-text-primary);
+    text-align: center;
+    padding: 1em 0 5em 0;
+}
+
+.comment-section a {
+    color: rgb(101, 155, 255);
+    text-decoration: none;
 }
