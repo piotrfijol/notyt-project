@@ -127,7 +127,6 @@ nav .burger .burger-menu {
     display: flex;
     flex-direction: column;
     display: grid;
-    grid-templ
     max-width: 1600px;
 }
 
@@ -159,8 +158,8 @@ nav .burger .burger-menu {
     color: var(--yt-text-secondary);
     font-family: sans-serif;
     display: none;
-    
 }
+
 
 .likes {
     width: 14em;
@@ -316,8 +315,12 @@ nav .burger .burger-menu {
 
 .recommended-video-thumbnail {
     position: relative;
-    width: 220px;
+    width: 190px;
     height: 92px;
+}
+
+.recommended-video-date {
+    display: none;
 }
 
 .recommended-video-duration {
@@ -353,16 +356,16 @@ nav .burger .burger-menu {
 }
 
 .recommended > * {
-    margin-top: .3em;
+    margin-top: 1em;
     min-width: 18em;
-    max-width: 26em;
+    max-width: 27em;
 }
 
 @media only screen and (min-width: 1130px) {
     .container {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 3fr 1fr;
         max-width: unset;
-        width: 95%;
+        width: 90%;
         max-width: 1900px;
     }
 
@@ -371,12 +374,12 @@ nav .burger .burger-menu {
         flex: 1;
     }
 
-    .recommended-video-date {
-        display: none;
-    }
-
     .recommended {
         margin-left: 1.5em;
+    }
+    
+    .recommended-video-date {
+        display: inline;
     }
 }
 
